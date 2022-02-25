@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+#    url: jdbc:postgresql://localhost:5434/exam-system
+    url: ${EXAM_DATABASE_URL}
+    username: ${EXAM_DATABASE_USER}
+    password: ${EXAM_DATABASE_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+server:
+  servlet:
+    context-path: /

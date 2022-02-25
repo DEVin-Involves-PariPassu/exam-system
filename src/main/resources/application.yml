@@ -7,8 +7,8 @@ spring:
     password: sa
   jpa:
     show-sql: true
-    database: H2
 
 server:
+  port: ${PORT}
   servlet:
     context-path: /
